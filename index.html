@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>To do List</title>
+</head>
+<body>
+    <h1 class="titulo">To do List</h1>
+    <main>
+        <section class="box">
+            <table class="tabela">
+                <thead>
+                    <tr>
+                        <th>Atividade</th>
+                        <th>Quantos dias da semana</th>
+                        <th>Repetir</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaAtividades">
+                    <tr class="fazer">
+                        <td class="infoAtividade">Futebol</td>
+                        <td class="infoDias">3</td>
+                        <td class="infoRepetir">Sim</td>
+                    </tr>
+                    <tr class="fazer">
+                        <td class="infoAtividade">Vôlei</td>
+                        <td class="infoDias">1</td>
+                        <td class="infoRepetir">Sim</td>
+                    </tr>
+                    <tr class="fazer">
+                        <td class="infoAtividade">Futsal</td>
+                        <td class="infoDias">1</td>
+                        <td class="infoRepetir">Não</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <form id="adicionarAtividade">
+                <div class="container">
+                    <label for="atividade">Atividade:</label>
+                    <input type="text" id="atividade" name="atividade">
+                    <label for="diassemana">Quantos dias da semana:</label>
+                    <input type="text" id="dias" name="dias">
+                    <p>Repetir:</p>
+                    <div class="repetir">
+                        <input type="radio" id="sim" name="repetir" value="Sim">
+                        <label for="html">Sim</label><br>
+                        <input type="radio" id="nao" name="repetir" value="Não">
+                        <label for="css">Não</label><br>
+                    </div>
+                    <button id="adicionar">Adicionar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="/js/main.js"></script>
+</body>
+</html>
