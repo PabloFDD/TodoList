@@ -1,15 +1,9 @@
 var botaoAdicionar = document.querySelector("#adicionar");
-var tdAtividade = document.querySelector(".infoAtividade");
-var tdDias = document.querySelector(".infoDias");
-var tdRepetir = document.querySelector(".infoRepetir");
-var fazeres = document.querySelectorAll(".fazer");
-var tabela = document.querySelector("#tabelaAtividades");
 
 botaoAdicionar.addEventListener("click", function(event){
     event.preventDefault();
 
     var form = document.querySelector("#adicionarAtividade");
-    console.log(form);
 
     var fazer = obtemFazeres(form);
 
@@ -18,11 +12,10 @@ botaoAdicionar.addEventListener("click", function(event){
     form.reset();
     
 })
-
 function obtemFazeres(form){
     var fazer = {
         atividade: form.atividade.value,
-        dias: form.dias.value,
+        dias: parseInt(form.dias.value),
         repetir: form.repetir.value
     }
     return fazer;
@@ -53,17 +46,3 @@ function adicionaAtividadeNaTabela(fazer) {
     var tabela = document.querySelector("#tabelaAtividades");
     tabela.appendChild(fazerTr);
 }
-
-tabela.addEventListener("dblclick", function(event){
-    event.target.parentNode.classList.add("fadeOut");
-
-    setTimeout(function() {
-        event.target.parentNode.remove();
-    }, 500);
-
-    setTimeout(function() {
-        alert("A atividade foi removido!");
-    }, 600);
-
-});
-
