@@ -13,12 +13,16 @@ botaoAdicionar.addEventListener("click", function(event){
     
 })
 function obtemFazeres(form){
-    var fazer = {
-        atividade: form.atividade.value,
-        dias: parseInt(form.dias.value),
-        repetir: form.repetir.value
+    if(form.atividade.value != '' && form.repetir.value != '' && isNaN(form.dias.value) == false && form.dias.value >= 1 && form.dias.value <= 7){
+        var fazer = {
+            atividade: form.atividade.value,
+            dias: parseInt(form.dias.value),
+            repetir: form.repetir.value
+        }
+        return fazer;
+    }else{
+        alert('Preencha todos os campos corretamente!');
     }
-    return fazer;
 }
 
 function montaTr(fazer){
@@ -43,6 +47,6 @@ function montaTd(dado, classe) {
 
 function adicionaAtividadeNaTabela(fazer) {
     var fazerTr = montaTr(fazer);
-    var tabela = document.querySelector("#tabelaAtividades");
     tabela.appendChild(fazerTr);
 }
+
