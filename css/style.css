@@ -45,7 +45,11 @@ td, th {
     align-items: center;
 }
 
-input{
+label, p{
+    margin: 5px;
+    font-weight: bold;
+}
+input, select{
     border: 1px solid black;
     width: 25%;
     padding: 8px;

@@ -10,10 +10,12 @@ botaoAdicionar.addEventListener("click", function(event){
     adicionaAtividadeNaTabela(fazer);
 
     form.reset();
+
+    document.querySelector('#atividade').focus();
     
 })
 function obtemFazeres(form){
-    if(form.atividade.value != '' && form.repetir.value != '' && isNaN(form.dias.value) == false && form.dias.value >= 1 && form.dias.value <= 7){
+    if(form.repetir.value != '' && isNaN(form.dias.value) == false && form.dias.value >= 1 && form.dias.value <= 7){
         var fazer = {
             atividade: form.atividade.value,
             dias: parseInt(form.dias.value),
@@ -45,7 +47,7 @@ function montaTd(dado, classe) {
     return td;
 }
 
-function adicionaAtividadeNaTabela(fazer) {
+var adicionaAtividadeNaTabela = (fazer) =>{
     var fazerTr = montaTr(fazer);
     tabela.appendChild(fazerTr);
 }

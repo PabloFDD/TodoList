@@ -20,21 +20,6 @@
                     </tr>
                 </thead>
                 <tbody id="tabelaAtividades">
-                    <tr class="fazer">
-                        <td class="infoAtividade">Futebol</td>
-                        <td class="infoDias">3</td>
-                        <td class="infoRepetir">Sim</td>
-                    </tr>
-                    <tr class="fazer">
-                        <td class="infoAtividade">Vôlei</td>
-                        <td class="infoDias">1</td>
-                        <td class="infoRepetir">Sim</td>
-                    </tr>
-                    <tr class="fazer">
-                        <td class="infoAtividade">Futsal</td>
-                        <td class="infoDias">1</td>
-                        <td class="infoRepetir">Não</td>
-                    </tr>
                 </tbody>
             </table>
         </section>
@@ -42,7 +27,12 @@
             <form id="adicionarAtividade">
                 <div class="container">
                     <label for="atividade">Atividade:</label>
-                    <input type="text" id="atividade" name="atividade" placeholder="EX: Futebol">
+                    <select name="atividade" id="atividade">
+                        <option value="Futebol">Futebol</option>
+                        <option value="Vôlei">Vôlei</option>
+                        <option value="Futsal">Futsal</option>
+                        <option value="Basquete">Basquete</option>
+                      </select>
                     <label for="diassemana">Quantos dias na semana:</label>
                     <input type="text" id="dias" name="dias" placeholder="EX: 1 a 7" maxlength="1">
                     <p>Repetir:</p>
