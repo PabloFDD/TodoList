@@ -51,4 +51,3 @@ var adicionaAtividadeNaTabela = (fazer) =>{
     var fazerTr = montaTr(fazer);
     tabela.appendChild(fazerTr);
 }
-
