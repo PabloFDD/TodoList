@@ -11,20 +11,17 @@ botaoAdicionar.addEventListener("click", function(event){
 
     form.reset();
 
-    document.querySelector('#atividade').focus();
+    document.querySelector('#atividade').focus();  
     
 })
+
 function obtemFazeres(form){
-    if(form.repetir.value != '' && isNaN(form.dias.value) == false && form.dias.value >= 1 && form.dias.value <= 7){
         var fazer = {
             atividade: form.atividade.value,
-            dias: parseInt(form.dias.value),
+            dias: form.diassemana.value,
             repetir: form.repetir.value
         }
         return fazer;
-    }else{
-        alert('Preencha todos os campos corretamente!');
-    }
 }
 
 function montaTr(fazer){
@@ -40,6 +37,7 @@ function montaTr(fazer){
 }
 
 function montaTd(dado, classe) {
+    
     var td = document.createElement("td");
     td.classList.add(classe);
     td.textContent = dado;
@@ -48,6 +46,7 @@ function montaTd(dado, classe) {
 }
 
 var adicionaAtividadeNaTabela = (fazer) =>{
+    
     var fazerTr = montaTr(fazer);
     tabela.appendChild(fazerTr);
 }
