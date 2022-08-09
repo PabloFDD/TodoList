@@ -15,8 +15,8 @@
                 <thead>
                     <tr>
                         <th>Atividade</th>
-                        <th>Quantos dias na semana</th>
-                        <th>Repetir</th>
+                        <th>Que dia da semana</th>
+                        <th>Repetir semana que vem</th>
                     </tr>
                 </thead>
                 <tbody id="tabelaAtividades">
@@ -27,27 +27,37 @@
             <form id="adicionarAtividade">
                 <div class="container">
                     <label for="atividade">Atividade:</label>
-                    <select name="atividade" id="atividade">
-                        <option value="Futebol">Futebol</option>
-                        <option value="Vôlei">Vôlei</option>
-                        <option value="Futsal">Futsal</option>
-                        <option value="Basquete">Basquete</option>
+                    <div class="divAtividade">
+                        <select name="atividade" id="atividade">
+                            <option value="Futebol">Futebol</option>
+                        </select>
+                        <button class="addAtividade">+ Atividade</button>
+                    </div>
+                    <label for="diassemana">Que dia da semana:</label>
+                    <select name="diassemana" id="diassemana">
+                        <option value="Domingo">Domingo</option>
+                        <option value="Segunda-Feira">Segunda-Feira</option>
+                        <option value="Terça-Feira">Terça-Feira</option>
+                        <option value="Quarta-Feira">Quarta-Feira</option>
+                        <option value="Quinta-Feira">Quinta-Feira</option>
+                        <option value="Sexta-Feira">Sexta-Feira</option>
+                        <option value="Sábado">Sábado</option>
                       </select>
-                    <label for="diassemana">Quantos dias na semana:</label>
-                    <input type="number" id="dias" name="dias" placeholder="EX: 1 a 7" maxlength="1">
                     <p>Repetir:</p>
                     <div class="repetir">
-                        <input type="radio" id="sim" name="repetir" value="Sim">
+                        <input type="radio" id="sim" name="repetir" value="Sim" checked>
                         <label for="html">Sim</label><br>
                         <input type="radio" id="nao" name="repetir" value="Não">
                         <label for="css">Não</label><br>
                     </div>
                     <button id="adicionar">Adicionar</button>
+                    <span>Obs: Para remover da lista basta clicar duas vezes dentro da tabela.</span>
                 </div>
             </form>
         </section>
     </main>
     <script src="/js/main.js"></script>
     <script src="/js/remover.js"></script>
+    <script src="/js/addAtividade.js"></script>
 </body>
 </html>
